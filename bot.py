@@ -105,14 +105,7 @@ async def kick(ctx, member: discord.Member):
 @bot.event
 async def on_message(message):
     if message.content.startswith('*help'):
-        msg = await bot.send_message(message.channel, '```Heres what i can do :```')
-        await asyncio.sleep(0.5)
-        msg2 = await bot.send_message(message.channel, '```mhmhmhmhmmhm```')
-        await asyncio.sleep(0.5)
-        msg3 = await bot.send_message(message.channel, '```Bot powered by Ouindoze™, message will delete in 15 seconds```')
-        await asyncio.sleep(15)
-        await bot.delete_message(msg)
-        await bot.delete_message(msg2)
-        await bot.delete_message(msg3)
+        embed=discord.Embed(title="Bot Commands", description="Help is a further thing and will be delayed until code is done!".format(member, ctx.message.author), color=0xffff)
+        await bot.say(embed=embed)
 
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
