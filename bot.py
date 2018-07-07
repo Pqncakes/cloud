@@ -115,14 +115,14 @@ async def ping(ctx):
 @bot.event
 async def on_message(message):
     if message.content.startswith('*help'):
-        msg = await client.send_message(message.channel, '```Heres what i can do :```')
+        msg = await bot.send_message(message.channel, '```Heres what i can do :```')
         await asyncio.sleep(0.5)
-        msg2 = await client.send_message(message.channel, '```mhmhmhmhmmhm```')
+        msg2 = await bot.send_message(message.channel, '```mhmhmhmhmmhm```')
         await asyncio.sleep(0.5)
-        msg3 = await client.send_message(message.channel, '```Bot powered by Ouindoze™, message will delete in 15 seconds```')
+        msg3 = await bot.send_message(message.channel, '```Bot powered by Ouindoze™, message will delete in 15 seconds```')
         await asyncio.sleep(15)
-        await client.delete_message(msg)
-        await client.delete_message(msg2)
-await client.delete_message(msg3)
+        await bot.delete_message(msg)
+        await bot.delete_message(msg2)
+        await bot.delete_message(msg3)
 
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
