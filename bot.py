@@ -4,7 +4,6 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-await bot.remove_command('help')
 
 bot = commands.Bot(command_prefix='*')
 
@@ -15,6 +14,10 @@ async def on_ready():
     print ("my current ID is: " + bot.user.id)
     await bot.change_presence(game=discord.Game(name='Beta - *help'))
 
+@bot.event
+async def on_ready():
+    await bot.remove_command('help')
+    
 @bot.command(pass_context=True)
 async def Cloud ():
     await bot.say ("Coming Soon!")
