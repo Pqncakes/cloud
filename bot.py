@@ -102,9 +102,15 @@ async def kick(ctx, member: discord.Member):
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")     
 
-@bot.event
-async def on_message(message):
-    if message.content.startswith('*help'):
-        await bot.say ("Coming Soon!")
 
+@client.event
+async def on_message(message):
+    if message.content.startswith('_whatcanyoudo?'):
+        msg = await client.send_message(message.channel, '''`Bot Commands And Features:
+Lmfao tests
+test 2
+Cloud v1.5
+'''
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
+
+      
