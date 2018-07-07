@@ -105,7 +105,6 @@ async def kick(ctx, member: discord.Member):
 @bot.event
 async def on_message(message):
     if message.content.startswith('*help'):
-        embed=discord.Embed(title="Bot Commands", description="Help is a further thing and will be delayed until code is done!"fmt.format(Channel))
-        await bot.say(embed=embed)
+        await bot.say ("Coming Soon!")
 
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
