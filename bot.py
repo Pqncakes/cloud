@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-bot.remove_command('help')
+await bot.remove_command('help')
 
 bot = commands.Bot(command_prefix='*')
 
