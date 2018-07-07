@@ -13,11 +13,7 @@ async def on_ready():
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
     await bot.change_presence(game=discord.Game(name='Beta - *help'))
-
-@bot.event
-async def on_ready():
-    await bot.remove_command('help')
-    
+ 
 @bot.command(pass_context=True)
 async def Cloud ():
     await bot.say ("Coming Soon!")
@@ -105,12 +101,6 @@ async def kick(ctx, member: discord.Member):
         await bot.say("**{0}** has been kicked. :white_check_mark:")
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")     
-
-@bot.command(pass_context=True)
-async def ping(ctx):
-    now = datetime.datetime.utcnow()
-    delta = now-ctx.message.timestamp
-    await client.say('{}ms'.format(delta(microseconds=1)))
 
 @bot.event
 async def on_message(message):
