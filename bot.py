@@ -113,7 +113,7 @@ async def ping(ctx):
     await client.say('{}ms'.format(delta(microseconds=1)))
 
 @bot.command(pass_context = True)
-async def mute(ctx, member: discord.Member):
+async def help(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '194151340090327041':
         role = discord.utils.get(member.server.roles, name='Muted')
         await bot.add_roles(member, role)
