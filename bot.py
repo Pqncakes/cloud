@@ -101,13 +101,5 @@ async def kick(ctx, member: discord.Member):
         await bot.say("**{0}** has been kicked. :white_check_mark:")
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")     
-
-@bot.event
-async def on_message(message):
-    if message.content.startswith('_whatcanyoudo?'):
-        msg = await client.send_message(message.channel, '''`Bot Commands And Features:
-Lmfao tests
-test 2
-Cloud v1.5
-''')                                  
+                            
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")   
