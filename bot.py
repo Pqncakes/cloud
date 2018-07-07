@@ -48,7 +48,7 @@ async def softban(ctx, member: discord.Member):
 
 @bot.command(pass_context = True)
 async def unsoftb(ctx, member: discord.Member):
-     if ctx.message.author.server_permissions.manage_roles ctx.message.author.id == '379187195187298304':
+     if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '379187195187298304':
         role = discord.utils.get(member.server.roles, name='Blinded')
         await bot.remove_roles(member, role)
         embed=discord.Embed(title="User Muted!", description="**{0}** was unblinded by **{1}**!".format(member, ctx.message.author), color=0xff00f6)
@@ -68,7 +68,7 @@ async def game(ctx, *args):
 
 @bot.command(pass_context = True)
 async def setnick(ctx, member: discord.Member, *args):
-     if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '379187195187298304':
+     if ctx.message.author.server_permissions.manage_nicknames or ctx.message.author.id == '379187195187298304':
         mesg = ' '.join(args)
         await bot.change_nickname(member, mesg)
         await bot.say(":white_check_mark: Success!")
