@@ -112,15 +112,17 @@ async def ping(ctx):
     delta = now-ctx.message.timestamp
     await client.say('{}ms'.format(delta(microseconds=1)))
 
-@bot.command(pass_context = True)
-async def help(ctx, member: discord.Member):
-     if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '194151340090327041':
-        role = discord.utils.get(member.server.roles, name='Muted')
-        await bot.add_roles(member, role)
-        embed=discord.Embed(title="User Muted!", description="**{0}** was muted by **{1}**!".format(member, ctx.message.author), color=0xff00f6)
-        await bot.say(embed=embed)
-     else:
-        embed=discord.Embed(title="Permission Denied.", description="You don't have permission to use this command.", color=0xff00f6)
-        await bot.say(embed=embed)
+@bot.event
+async def on_message(message):
+    if message.content.startswith('*help'):
+        msg = await client.send_message(message.channel, '```Heres what i can do :```')
+        await asyncio.sleep(0.5)
+        msg2 = await client.send_message(message.channel, '```mhmhmhmhmmhm```')
+        await asyncio.sleep(0.5)
+        msg3 = await client.send_message(message.channel, '```Bot powered by Ouindoze™, message will delete in 15 seconds```')
+        await asyncio.sleep(15)
+        await client.delete_message(msg)
+        await client.delete_message(msg2)
+await client.delete_message(msg3)
 
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
