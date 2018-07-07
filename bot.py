@@ -102,4 +102,10 @@ async def kick(ctx, member: discord.Member):
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")     
 
+@client.command(pass_context=True)
+async def ping(ctx):
+    now = datetime.datetime.utcnow()
+    delta = now-ctx.message.timestamp
+    await client.say('{}ms'.format(delta(microseconds=1)))
+
 bot.run("NDY1MDY5MDA2OTQ1MTI0MzYy.DiIKwA.OW5Fu3ulaAayPpTpVRrsrUGCOao")
