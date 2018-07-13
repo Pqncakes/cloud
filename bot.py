@@ -136,8 +136,8 @@ More to come soon!
 ''')
       
 @bot.command(pass_context=True)
-async def block(ctx, member: discord.Member):
+async def block(ctx):
     await bot.say("If you recived a message from the bot then your good to go, If you didn't recive anything, you've blocked the bot.")
-    await bot.send_message(member, ':tada: I see you recived this message! Your Good To Go!')
+    await bot.send_message(message.author, ':tada: I see you recived this message! Your Good To Go!')
  
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
