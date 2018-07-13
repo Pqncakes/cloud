@@ -105,8 +105,31 @@ async def kick(ctx, member: discord.Member):
 @bot.command(pass_context = True)
 async def bothelp():
     await bot.say('''
-This is a 
-test help message
+***Bot Help***
+--------------------
+**Bot Prefix: ***
+
+*bothelp - Shows this message
+
+*say - Usage: *say [message]* -**Makes the bot say something**
+
+*kick - Usage: *kick @User* -**Kicks a User from the server.**
+
+*ban - Usage: *ban @User* -**Bans a User from the server.**
+
+*softban - Note: Must Have Blinded Role Setup - Usage: *softban @User* -**Hides a User from all server channels and catigories**
+
+*unsoftb - Usage: *unsoftb @User* -**Removes the softban from a user**
+
+*game - Only usable by the bot owner*
+
+*setnick - Usage: *setnick @User [Nickname]* -**Sets a users nickname.**
+
+*mute - Note: Must have Muted role setup - Usage: *mute @User* - **Makes a user unable to talk.**
+
+*unmute - Usage: *unmute @User* -**Removes the mute from a user.**
+----------------------------------------------------------
+More to come soon!
 ''')
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")   
