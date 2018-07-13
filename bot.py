@@ -98,7 +98,7 @@ async def ban(ctx, member: discord.Member):
 async def kick(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.kick_members :
         await bot.kick(member)
-        await bot.say(":white_check_mark:`User Has been kicked:` +member.name")
+        await bot.say(":white_check_mark:`User Has been kicked:`" +member.name))
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")  
    
