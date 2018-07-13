@@ -100,6 +100,13 @@ async def kick(ctx, member: discord.Member):
         await bot.kick(member)
         await bot.say("**{0}** has been kicked. :white_check_mark:")
      else:
-        await bot.say(":x: You Do Not Have Permission to use this command")     
-                            
+        await bot.say(":x: You Do Not Have Permission to use this command")  
+   
+@bot.command(pass_context = True)
+async def bothelp():
+    await bot.say('''
+This is a 
+test help message
+''')
+
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")   
