@@ -135,7 +135,7 @@ async def bothelp():
 More to come soon!
 ''')
       
- @bot.event
+@bot.event
 async def on_message(message):
     if message.content.startswith("*block")
         await bot.say("If you recive a message from the bot, Your good to go, If you didn't, youve blocked the bot.")
