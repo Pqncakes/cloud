@@ -141,6 +141,7 @@ async def block(ctx):
 
 @bot.command(pass_context=True)
 async def poke(ctx, member: discord.Member):
+    await bot.say("**You have poked:** " +member.name)
     await bot.send_message(member, ':point_right: You Have been Poked!')
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
