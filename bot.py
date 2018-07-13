@@ -127,9 +127,18 @@ async def bothelp():
 
 *mute - Note: Must have Muted role setup - Usage: *mute @User* - **Makes a user unable to talk.**
 
+
 *unmute - Usage: *unmute @User* -**Removes the mute from a user.**
+
+*block - **Checks If You've Blocked The Bot.
 ----------------------------------------------------------
 More to come soon!
 ''')
+      
+ @bot.event
+async def on_message(message):
+    if message.content.startswith("*block")
+        await bot.say("If you recive a message from the bot, Your good to go, If you didn't, youve blocked the bot.")
+        await bot.send_message(message.author, ":tada: I see you got this message! Your Good To Go!")   
 
-bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")   
+bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
