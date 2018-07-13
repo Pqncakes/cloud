@@ -102,4 +102,4 @@ async def kick(ctx, member: discord.Member):
      else:
         await bot.say(":x: You Do Not Have Permission to use this command")     
                             
-bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiKEhQ.6W5VASt8Y-mQkkcKpioSSxwymUY")   
+bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")   
