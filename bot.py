@@ -13,7 +13,13 @@ async def on_ready():
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
     await bot.change_presence(game=discord.Game(name='RedRevamp - *bothelp'))
- 
+
+@bot.event
+async def on_message(message):
+    if message.content.startswith("fuck"):
+        await bot.delete_message(message)
+        await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name)
+
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '379187195187298304':
@@ -135,11 +141,5 @@ More to come soon!
 async def block(ctx):
     await bot.say("If you recived a message from the bot then your good to go, If you didn't recive anything, you've blocked the bot.")
     await bot.send_message(ctx.message.author, ':tada: I see you recived this message! Your Good To Go!')
-
-@bot.event
-async def on_message(message):
-    if message.content.startswith("fuck"):
-        await bot.delete_message(message)
-        await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name) 
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
