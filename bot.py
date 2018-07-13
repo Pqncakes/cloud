@@ -16,10 +16,9 @@ async def on_ready():
 
 @bot.event
 async def on_message(ctx, message):
-    if message.content.startswith("fuck"):
+    if message.content.startswith("fuck,shit,asshole,dick,ass,fack,sh1t,d1ck"):
         await bot.delete_message(message)
-        await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name)
-
+        
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '379187195187298304':
@@ -133,10 +132,13 @@ async def bothelp():
 *unmute - Usage: *unmute @User* -**Removes the mute from a user.**
 
 *block - **Checks If You've Blocked The Bot.
-----------------------------------------------------------
+
+UPDATE: Bot Has Chat Filter and will delete any swear words.
+      
+--------------------------------------------------------------
 More to come soon!
 ''')
-      
+
 @bot.command(pass_context=True)
 async def block(ctx):
     await bot.say("If you recived a message from the bot then your good to go, If you didn't recive anything, you've blocked the bot.")
