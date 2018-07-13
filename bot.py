@@ -15,7 +15,7 @@ async def on_ready():
     await bot.change_presence(game=discord.Game(name='RedRevamp - *bothelp'))
 
 @bot.event
-async def on_message(ctx, message):
+async def on_message(message):
     if message.content.startswith("fuck,shit,asshole,dick,ass,fack,sh1t,d1ck"):
         await bot.delete_message(message)
         
