@@ -13,11 +13,6 @@ async def on_ready():
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
     await bot.change_presence(game=discord.Game(name='RedRevamp - *bothelp'))
-
-@bot.event
-async def on_message(message):
-    if message.content.startswith("fuck,shit,asshole,dick,ass,fack,sh1t,d1ck"):
-        await bot.delete_message(message)
         
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
@@ -133,7 +128,7 @@ async def bothelp():
 
 *block - **Checks If You've Blocked The Bot.
 
-UPDATE: Bot Has Chat Filter and will delete any swear words.
+*poke - Usage: *poke @User* - **Pokes a user**
       
 --------------------------------------------------------------
 More to come soon!
@@ -143,5 +138,9 @@ More to come soon!
 async def block(ctx):
     await bot.say("If you recived a message from the bot then your good to go, If you didn't recive anything, you've blocked the bot.")
     await bot.send_message(ctx.message.author, ':tada: I see you recived this message! Your Good To Go!')
+
+@bot.command(pass_context=True)
+async def poke(ctx, member: discord.Member):
+    await bot.send_message(member, ':point_right: You Have been Poked!')
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
