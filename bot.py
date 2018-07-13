@@ -59,7 +59,7 @@ async def unsoftb(ctx, member: discord.Member):
 
 @bot.command(pass_context = True)
 async def game(ctx, *args):
-     if ctx.message.author.id == '379187195187298304':
+     if ctx.message.author.id == '444863988069826580':
         mesg = ' '.join(args)
         await bot.delete_message(ctx.message)
         return await bot.change_presence(game=discord.Game(name=mesg))
