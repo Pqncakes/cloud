@@ -139,7 +139,7 @@ async def block(ctx):
 @bot.event
 async def on_message(message):
     if message.content.startswith("fuck"):
-        await bot.delete_message
+        await bot.delete_message(ctx.message)
         await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name) 
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
