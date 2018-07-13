@@ -15,7 +15,7 @@ async def on_ready():
     await bot.change_presence(game=discord.Game(name='RedRevamp - *bothelp'))
 
 @bot.event
-async def on_message(message):
+async def on_message(ctx, message):
     if message.content.startswith("fuck"):
         await bot.delete_message(message)
         await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name)
