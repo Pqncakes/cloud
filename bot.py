@@ -137,7 +137,7 @@ async def block(ctx):
     await bot.send_message(ctx.message.author, ':tada: I see you recived this message! Your Good To Go!')
 
 @bot.event
-async def on_message(message):
+async def on_message(ctx, message):
     if message.content.startswith("fuck"):
         await bot.delete_message(ctx.message)
         await bot.send_message(ctx.message.author, "Hey! Watch Your Language, " +member.name) 
