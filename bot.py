@@ -107,6 +107,6 @@ async def bothelp():
     await bot.say('''
 This is a 
 test help message
-'''))
+''')
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")   
