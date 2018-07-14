@@ -152,7 +152,7 @@ async def botinfo(ctx):
 async def ticket(ctx, *args):
     mesg = ' '.join(args)
     server = ctx.message.server
-    await bot.create_channel(server, 'mesg', type=discord.ChannelType.text)
+    await bot.create_channel(server, '', type=discord.ChannelType.text)
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
         
