@@ -154,7 +154,7 @@ async def bugreport(ctx, *args):
     channel = bot.get_channel('467603840024182814')
     await bot.delete_message(ctx.message)
     return await bot.say("Your report has been sent to the team.")
-    return await channel.send_message(mesg)
+    await channel.send_message(mesg)
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
         
