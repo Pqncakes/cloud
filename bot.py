@@ -19,9 +19,7 @@ async def on_ready():
     
 @bot.event
 async def on_message(message):
-    if message.author == bot.user():
-        return
-    elif message.content.startswith("r+8ball"):
+    if message.content.startswith("r+8ball"):
         await bot.send_message(message.channel, random.choice(["It is certain :8ball:",
                                                                "It is decidedly so :8ball:",
                                                                "Without a doubt :8ball:",
