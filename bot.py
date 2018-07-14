@@ -148,12 +148,14 @@ async def botinfo(ctx):
         embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online",  color=0x00ffff)
         await bot.say(embed=embed)
 
-@bot.command(pass_context=True)
-async def ticket(ctx, *args):
+@bot.command(pass_context = True)
+async def say(ctx, *args):
     mesg = ' '.join(args)
-    server = ctx.message.server
-    await bot.create_channel(server, '', type=discord.ChannelType.text)
-
+    channel = client.get_channel(467603840024182814)
+    await bot.delete_message(ctx.message)
+    return await bot.say("Your report has been sent to the team.")
+    return await channel.send_message(mesg)
+  
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
         
 
