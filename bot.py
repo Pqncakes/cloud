@@ -16,7 +16,25 @@ async def on_ready():
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
     await bot.change_presence(game=discord.Game(name='v1.0.0 - r+bothelp'))
-          
+   
+@bot.event
+async def on_message(message):
+    if message.content.startswith("rr8ball"):
+        await bot.send_message(message.channel, random.choice([ "You may rely on it :8ball:",
+                                                                "As I see it, yes :8ball:",
+                                                                "Most likely :8ball:",
+                                                                "Outlook good :8ball:",
+                                                                "Yes :8ball:",
+                                                                "Signs point to yes :8ball:",
+                                                                "Ask again later :8ball:",
+                                                                "Better not tell you now :8ball:",
+                                                                "Cannot predict now :8ball:",
+                                                                "My reply is no :8ball:",
+                                                                "My sources say no :8ball:",
+                                                                "Outlook not so good :8ball:",
+                                                                "Very doubtful :8ball:"]))
+    
+
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.manage_roles or ctx.message.author.id == '379187195187298304':
