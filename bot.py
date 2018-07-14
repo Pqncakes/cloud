@@ -144,7 +144,7 @@ async def poke(ctx, member: discord.Member):
     await bot.send_message(member, ':point_right: You Have been Poked!')
 
 @bot.command(pass_context = True)
-async def info(ctx, member: discord.Member):
+async def botinfo(ctx):
         embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online".format(member, ctx.message.author), color=0x00ffff)
         await bot.say(embed=embed)
 
