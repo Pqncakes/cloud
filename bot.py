@@ -151,7 +151,7 @@ async def botinfo(ctx):
 @bot.command(pass_context = True)
 async def bugreport(ctx, *args):
     mesg = ' '.join(args)
-    channel = bot.get_channel(467603840024182814)
+    channel = bot.get_channel('467603840024182814')
     await bot.delete_message(ctx.message)
     return await bot.say("Your report has been sent to the team.")
     return await channel.send_message(mesg)
