@@ -149,7 +149,7 @@ async def botinfo(ctx):
         await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
-async def ticket():
+async def ticket(ctx, *args):
     mesg = ' '.join(args)
     server = ctx.message.server
     await bot.create_channel(server, 'mesg', type=discord.ChannelType.text)
