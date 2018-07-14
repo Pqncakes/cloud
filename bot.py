@@ -148,5 +148,13 @@ async def botinfo(ctx):
         embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online",  color=0x00ffff)
         await bot.say(embed=embed)
 
-bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
+@bot.command(pass_context=True)
+async def ticket():
+    mesg = ' '.join(args)
+    server = ctx.message.server
+    await bot.create_channel(server, 'mesg', type=discord.ChannelType.text)
+
+bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
+        
+
 
