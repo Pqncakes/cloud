@@ -160,29 +160,6 @@ async def bugreport(ctx, *args):
     server = ctx.message.server
     await bot.create_channel(server, 'report-369543387', type=discord.ChannelType.text)
     return await bot.say("Please Tag Insane#5632 in the ticket with your bug report!")
-
-@bot.event
-async def on_message(message):
-    if message.content.startswith("r+8ball"):
-        await bot.send_message(message.channel, random.choice(['''
-It is certain :8ball:
-Without a doubt :8ball:
-Yes, definitely :8ball:
-  You may rely on it :8ball:
-As I see it, yes :8ball:
-  Most likely :8ball:
-Outlook good :8ball:
-Yes :8ball:",
-Signs point to yes :8ball:
-Ask again later :8ball:
-Better not tell you now :8ball:    
-Concentrate and ask again :8ball:
-Don't count on it :8ball:
-My reply is no :8ball:
-My sources say no :8ball:
-Outlook not so good :8ball:
-Very doubtful :8ball
-''']))
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
