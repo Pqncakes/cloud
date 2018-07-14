@@ -159,7 +159,7 @@ async def bugreport(ctx, *args):
     await bot.create_channel(server, 'report-369543387', type=discord.ChannelType.text)
     return await bot.say("Please Tag Insane#5632 in the ticket with your bug report!")
 
- @bot.command(pass_context = True)
+@bot.command(pass_context = True)
 async def closereport(ctx, *args):
      if ctx.message.author.id == '444863988069826580':
         server = ctx.message.server
