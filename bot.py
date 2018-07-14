@@ -12,7 +12,7 @@ async def on_ready():
     print ("Cloud is ready and running.")
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
-    await bot.change_presence(game=discord.Game(name='v1.0.0 - r+help'))
+    await bot.change_presence(game=discord.Game(name='v1.0.0 - r+bothelp'))
         
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
