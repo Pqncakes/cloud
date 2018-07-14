@@ -163,7 +163,7 @@ async def bugreport(ctx, *args):
 async def closereport(ctx, *args):
      if ctx.message.author.id == '444863988069826580':
         server = ctx.message.server
-        await bot.delete_channel(server, 'report-369543387', type=discord.ChannelType.text)
+        await bot.delete_channel(server, 'report-369543387')
      else:
         await bot.say("Only The Bot Owner can use this command!")
     
