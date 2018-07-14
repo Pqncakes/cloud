@@ -151,7 +151,7 @@ async def botinfo(ctx):
 @bot.command(pass_context = True)
 async def bugreport(ctx, *args):
     mesg = ' '.join(args)
-    await bot.send_message(444863988069826580, mesg)
+    await bot.send_message(user.444863988069826580, mesg)
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
         
