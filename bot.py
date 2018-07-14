@@ -132,8 +132,6 @@ r+poke - Usage: *poke @User* - **Pokes a user**
 r+botinfo - **Shows The Bot Information**
 
 r+bugreport - **Opens a ticket to report bot bugs, Bugs will only be filed from reports in the RedRevamp Official Discord.
-
-r+closereport - Only for the bot owner.
 ----------------------------------------------------------------------------------------------------------------------
 More to come soon!
 ''')
@@ -158,15 +156,7 @@ async def bugreport(ctx, *args):
     server = ctx.message.server
     await bot.create_channel(server, 'report-369543387', type=discord.ChannelType.text)
     return await bot.say("Please Tag Insane#5632 in the ticket with your bug report!")
-
-@bot.command(pass_context = True)
-async def closereport(ctx, *args):
-     if ctx.message.author.id == '444863988069826580':
-        server = ctx.message.server
-        await bot.delete_channel(server, 'report-369543387')
-     else:
-        await bot.say("Only The Bot Owner can use this command!")
-    
+  
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
 
