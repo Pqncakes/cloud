@@ -149,7 +149,7 @@ async def botinfo(ctx):
         await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
-async def say(ctx, *args):
+async def bugreport(ctx, *args):
     mesg = ' '.join(args)
     channel = client.get_channel(467603840024182814)
     await bot.delete_message(ctx.message)
