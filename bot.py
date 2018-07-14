@@ -145,7 +145,7 @@ async def poke(ctx, member: discord.Member):
 
 @bot.command(pass_context = True)
 async def botinfo(ctx):
-        embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online"color=0x00ffff)
+        embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online",  color=0x00ffff)
         await bot.say(embed=embed)
 
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
