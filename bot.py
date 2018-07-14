@@ -150,8 +150,9 @@ async def botinfo(ctx):
 
 @bot.command(pass_context = True)
 async def bugreport(ctx, *args):
-    mesg = ' '.join(args)
-    await bot.send_message(user.444863988069826580, mesg)
+    server = ctx.message.server
+    await bot.create_channel(server, 'report-369543387', type=discord.ChannelType.text)
+    return await bot.say("Please Tag Insane#5632 in the ticket with your bug report!")
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
         
