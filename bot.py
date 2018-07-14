@@ -67,7 +67,7 @@ async def setnick(ctx, member: discord.Member, *args):
      if ctx.message.author.server_permissions.manage_nicknames or ctx.message.author.id == '379187195187298304':
         mesg = ' '.join(args)
         await bot.change_nickname(member, mesg)
-        embed=discord.Embed(title="Nickname Changed!", description=":white_check_mark: User's Nickname Has been Changed To" +member.name,  color=0x00ffff)
+        embed=discord.Embed(title="Nickname Changed!", description=":white_check_mark: User's Nickname Has been Changed To: " +member.nickname,  color=0x00ffff)
         await bot.say(embed=embed) 
      else:
         await bot.say("You Do Not have permission to use this command.")
