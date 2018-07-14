@@ -19,15 +19,13 @@ async def on_ready():
    
 @bot.event
 async def on_message(message):
-   elif message.content.startswith("rr8ball"):
+     if message.content.startswith("rr8ball"):
         await bot.send_message(message.channel, random.choice([ "You may rely on it :8ball:",
                                                                 "As I see it, yes :8ball:",
                                                                 "Most likely :8ball:",
                                                                 "Outlook good :8ball:",
                                                                 "Yes :8ball:",
                                                                 "Signs point to yes :8ball:",
-                                                                "Ask again later :8ball:",
-                                                                "Better not tell you now :8ball:",
                                                                 "Cannot predict now :8ball:",
                                                                 "My reply is no :8ball:",
                                                                 "My sources say no :8ball:",
