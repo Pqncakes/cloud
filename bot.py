@@ -153,8 +153,12 @@ async def bugreport(ctx, *args):
     server = ctx.message.server
     await bot.create_channel(server, 'report-369543387', type=discord.ChannelType.text)
     return await bot.say("Please Tag Insane#5632 in the ticket with your bug report!")
-  
-bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")    
-        
+
+ @bot.command(pass_context = True)
+async def closereport(ctx, *args):
+    server = ctx.message.server
+    await bot.delete_channel(server, 'report-369543387', type=discord.ChannelType.text) 
+    
+bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
 
