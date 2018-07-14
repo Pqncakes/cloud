@@ -54,7 +54,7 @@ async def unsoftb(ctx, member: discord.Member):
         await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
-async def game(ctx, *args):
+async def status(ctx, *args):
      if ctx.message.author.id == '444863988069826580':
         mesg = ' '.join(args)
         await bot.delete_message(ctx.message)
@@ -143,4 +143,10 @@ async def poke(ctx, member: discord.Member):
     await bot.say("**You have poked:** " +member.name)
     await bot.send_message(member, ':point_right: You Have been Poked!')
 
+@bot.command(pass_context = True)
+async def info(ctx, member: discord.Member):
+        embed=discord.Embed(title="Bot Info ", description="Bot Name & Tag: RedRevamp#5660 ; Create by Insane#5632 ; Status: Online".format(member, ctx.message.author), color=0x00ffff)
+        await bot.say(embed=embed)
+
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")
+
