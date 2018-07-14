@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user():
         return
     elif message.content.startswith("r+8ball"):
-        await bot.send_message(message.channel, random.choice([" "It is certain :8ball:",
+        await bot.send_message(message.channel, random.choice(["It is certain :8ball:",
                                                                "It is decidedly so :8ball:",
                                                                "Without a doubt :8ball:",
                                                                "Yes, definitely :8ball:",
