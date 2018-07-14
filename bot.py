@@ -12,7 +12,7 @@ async def on_ready():
     print ("Cloud is ready and running.")
     print ("My Username currently is: " + bot.user.name)
     print ("my current ID is: " + bot.user.id)
-    await bot.change_presence(game=discord.Game(name='RedRevamp - *bothelp'))
+    await bot.change_presence(game=discord.Game(name='v1.0.0 - r+help'))
         
 @bot.command(pass_context = True)
 async def unmute(ctx, member: discord.Member):
@@ -105,30 +105,29 @@ async def bothelp():
 --------------------
 **Bot Prefix: r+**
 
-*bothelp - Shows this message
+r+bothelp - Shows this message
 
-*say - Usage: *say [message]* -**Makes the bot say something**
+r+say - Usage: *say [message]* -**Makes the bot say something**
 
-*kick - Usage: *kick @User* -**Kicks a User from the server.**
+r+kick - Usage: *kick @User* -**Kicks a User from the server.**
 
-*ban - Usage: *ban @User* -**Bans a User from the server.**
+r+ban - Usage: *ban @User* -**Bans a User from the server.**
 
-*softban - Note: Must Have Blinded Role Setup - Usage: *softban @User* -**Hides a User from all server channels and catigories**
+r+softban - Note: Must Have Blinded Role Setup - Usage: *softban @User* -**Hides a User from all server channels and catigories**
 
-*unsoftb - Usage: *unsoftb @User* -**Removes the softban from a user**
+r+unsoftb - Usage: *unsoftb @User* -**Removes the softban from a user**
 
-*game - Only usable by the bot owner*
+r+game - Only usable by the bot owner*
 
-*setnick - Usage: *setnick @User [Nickname]* -**Sets a users nickname.**
+r+setnick - Usage: *setnick @User [Nickname]* -**Sets a users nickname.**
 
-*mute - Note: Must have Muted role setup - Usage: *mute @User* - **Makes a user unable to talk.**
+r+mute - Note: Must have Muted role setup - Usage: *mute @User* - **Makes a user unable to talk.**
 
+r+unmute - Usage: *unmute @User* -**Removes the mute from a user.**
 
-*unmute - Usage: *unmute @User* -**Removes the mute from a user.**
+r+block - **Checks If You've Blocked The Bot.
 
-*block - **Checks If You've Blocked The Bot.
-
-*poke - Usage: *poke @User* - **Pokes a user**
+r+poke - Usage: *poke @User* - **Pokes a user**
       
 --------------------------------------------------------------
 More to come soon!
