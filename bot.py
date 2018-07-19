@@ -163,7 +163,7 @@ async def bugreport(ctx, *args):
 
 @bot.command(pass_context=True)
 async def dnd():
-    await bot.setActivity('dnd'):
+    await bot.setActivity('dnd');
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
