@@ -58,7 +58,7 @@ async def unsoftb(ctx, member: discord.Member):
 
 @bot.command(pass_context = True)
 async def status(ctx, *args):
-     if ctx.message.author.id == '444863988069826580':
+     if ctx.message.author.id == '466936868584292352':
         mesg = ' '.join(args)
         await bot.delete_message(ctx.message)
         return await bot.change_presence(game=discord.Game(name=mesg))
@@ -164,6 +164,10 @@ async def bugreport(ctx, *args):
 @bot.command(pass_context=True)
 async def dnd():
     await bot.staus('dnd');
+    
+@bot.command(pass_context=True)
+async def sotp():
+    await bot.stop
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
