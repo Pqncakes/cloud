@@ -167,7 +167,9 @@ async def dnd():
     
 @bot.command(pass_context=True)
 async def sotp():
-    await bot.stop
+    if ctx.message.author.id == '466936868584292352':
+    await bot.say(":x: Stopping Bot..")
+return await bot.stop
   
 bot.run("NDY1MTc3Nzk3NDM5MTI3NTUz.DiqfCg.nmw0xdF64YM_mjyf9aKpusiCe6I")        
 
